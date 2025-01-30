@@ -7,6 +7,10 @@ const config = {
     adapter: adapter({
       fallback: '404.html'
     }),
+    alias: {
+      $lib: '.src/lib',
+      $components: 'src/components'
+    },
     paths: {
       base: process.env.NODE_ENV === 'production' ? '/mySiteV2' : ''
     },
