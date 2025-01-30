@@ -1,7 +1,6 @@
 <script>
     import { base } from '$app/paths';
     
-
     const socialLinks = [
         {
             name: 'LinkedIn',

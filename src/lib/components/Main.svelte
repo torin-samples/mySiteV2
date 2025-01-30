@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import ProjectCards from './ProjectCards.svelte';
   import SkillCards from './SkillCards.svelte';
 </script>
@@ -55,7 +56,7 @@
     <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
       I'm always open to new opportunities and collaborations. Feel free to reach out!
     </p>
-    <a href="/Resume.pdf" download="Torin_Samples_Resume.pdf" 
+    <a href="{base}/Resume.pdf" download="Torin_Samples_Resume.pdf" 
       class="inline-flex items-center justify-center py-3 px-6 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 text-lg font-semibold">
       <i data-feather="download" class="mr-2"></i>
       Download Resume
