@@ -5,7 +5,6 @@
     let mounted = false;
 
     onMount(() => {
-        // Check system preference or stored preference
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const storedTheme = localStorage.getItem('theme');
         isDark = storedTheme === 'dark' || (!storedTheme && prefersDark);
