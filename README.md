@@ -1,58 +1,79 @@
-# create-svelte
+# Torin Samples
+## Software Developer Portfolio
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+A modern, responsive portfolio website built with SvelteKit and Tailwind CSS, showcasing my projects and technical skills.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## 🚀 Features
 
-## Creating a project
+- Responsive design optimized for all devices
+- Dark/Light mode toggle
+- Interactive project cards
+- Skill visualization
+- GitHub activity integration
+- Modern UI with smooth transitions
+- Particle background effects
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🛠️ Built With
 
-```bash
-# create a new project in the current directory
-npx sv create
+- SvelteKit
+- Tailwind CSS
+- TypeScript
 
-# create a new project in my-app
-npx sv create my-app
-```
+## 📱 Projects Showcased
 
-## Developing
+### RoamRich
+Mobile application providing personalized recommendations using AI
+- React Native, Express.js, MongoDB, Perplexity, Flask, Auth0
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Notekan
+AI-powered note-taking web application
+- Next.js, Express.js, Firebase, Python, Flask, OpenAI, AWS
 
-```bash
-npm run dev
+### Order System
+Interactive coffee ordering system
+- Java
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## 🔧 Technical Skills
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+### Languages
+- C/C++
+- Python
+- JavaScript/TypeScript
+- Java
+- SQL
 
-## Building
+### Frameworks & Libraries
+- React Native
+- Next.js
+- Express.js
+- Flask
+- Node.js
 
-To build your library:
+### Tools & Technologies
+- Git
+- RESTful APIs
+- Docker
+- MongoDB
+- Firebase
+- AWS
 
-```bash
-npm run package
-```
+## 📫 Contact
 
-To create a production version of your showcase app:
+- Email: torin.samples@gmail.com
+- LinkedIn: [linkedin.com/in/torin-samples](https://linkedin.com/in/torin-samples)
+- GitHub: [github.com/torin-samples](https://github.com/torin-samples)
 
-```bash
-npm run build
-```
+## 🌐 Languages
 
-You can preview the production build with `npm run preview`.
+- English (Native)
+- Mandarin (Conversational)
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## 🎓 Education
 
-## Publishing
+Currently pursuing Computer Science at the University of Washington
+- GPA: 3.69
+- Dean's List Recipient
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+## 📄 License
 
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+This project is licensed under the MIT License - see the LICENSE.md file for details

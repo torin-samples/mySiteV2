@@ -34,7 +34,7 @@
     <img src="/pfp.jpg" alt="Torin Samples" class="w-40 h-40 rounded-full object-cover mx-auto mb-8 border-4 border-white dark:border-gray-700 shadow-xl">
     <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-4">Torin Samples</h1>
     <p class="text-xl text-gray-800 dark:text-gray-200 mb-8 font-semibold bg-yellow-200 dark:bg-yellow-900 inline-block px-4 py-2 rounded-full">
-        Software Developer | Problem Solver | Tech Enthusiast
+        Software Developer | UW Student | AI Enthusiast
     </p>
     <div class="flex justify-center space-x-4">
         {#each socialLinks as link}
