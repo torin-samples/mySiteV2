@@ -1,6 +1,27 @@
 <script lang="ts">
   import FolderDownload from './FolderDownload.svelte';
 
+  let emailElement: HTMLElement;
+  let emailRevealed = false;
+  
+  function revealEmail() {
+    if (emailRevealed) return;
+    
+    const user = 'torin.samples';
+    const domain = 'gmail.com';
+    const email = user + '@' + domain;
+    
+    if (emailElement) {
+      emailElement.innerHTML = `
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        <a href="mailto:${email}" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">${email}</a>
+      `;
+      emailRevealed = true;
+    }
+  }
+
   const socialLinks = [
     {
       name: 'LinkedIn',
@@ -49,15 +70,22 @@
       <div class="text-center md:text-left">
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Get In Touch</h3>
         <div class="space-y-3">
-          <a 
-            href="mailto:torin.samples@gmail.com" 
-            class="flex items-center justify-center md:justify-start text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+          <div 
+            bind:this={emailElement}
+            on:click={revealEmail}
+            on:keydown={(e) => e.key === 'Enter' && revealEmail()}
+            class="flex items-center justify-center md:justify-start text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors cursor-pointer"
+            role="button"
+            tabindex="0"
+            aria-label="Click to reveal email address"
           >
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-            torin.samples@gmail.com
-          </a>
+            {#if !emailRevealed}
+              Click to reveal email
+            {/if}
+          </div>
           <div class="flex items-center justify-center md:justify-start text-gray-600 dark:text-gray-300">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
