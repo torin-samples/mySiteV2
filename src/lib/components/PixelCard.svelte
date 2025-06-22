@@ -279,7 +279,7 @@
 
 <div
   bind:this={containerRef}
-  class="relative overflow-hidden transition-all duration-300 hover:scale-105 {className}"
+  class="relative overflow-hidden transition-all duration-300 hover:scale-105 rounded-xl bg-transparent {className}"
   on:mouseenter={onMouseEnter}
   on:mouseleave={onMouseLeave}
   role="button"
@@ -291,3 +291,4 @@
   />
   <slot />
 </div>
+

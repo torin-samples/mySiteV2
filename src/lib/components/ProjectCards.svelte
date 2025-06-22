@@ -36,8 +36,13 @@
   <h2 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">Projects</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {#each projects as project}
-      <PixelCard variant={project.pixelVariant} className="w-full">
-        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 w-full h-full">
+       <PixelCard variant={project.pixelVariant} className="w-full rounded-xl">
+        <a 
+          href={project.link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="block bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 w-full h-full group cursor-pointer"
+        >
           <div class="h-48 {project.bgColor} flex items-center justify-center p-6">
             <h3 class="text-2xl font-bold text-white text-center">{project.title}</h3>
           </div>
@@ -53,19 +58,14 @@
                 </span>
               {/each}
             </div>
-            <a 
-              href={project.link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
-            >
+            <div class="inline-flex items-center text-blue-500 group-hover:text-blue-600 dark:text-blue-400 dark:group-hover:text-blue-300 transition-colors">
               View Project
               <svg class="w-4 h-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
-            </a>
+            </div>
           </div>
-        </div>
+        </a>
       </PixelCard>
     {/each}
   </div>

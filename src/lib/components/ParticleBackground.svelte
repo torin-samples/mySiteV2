@@ -7,7 +7,7 @@
     let mouse = { 
         x: 0,
         y: 0,
-        radius: 100
+        radius: 80
     };
 
     interface IParticle {
@@ -46,7 +46,7 @@
 
         draw() {
             if (!ctx) return;
-            ctx.fillStyle = 'rgba(66, 135, 245, 0.5';
+            ctx.fillStyle = 'rgba(66, 135, 245, 0.3';
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.closePath();

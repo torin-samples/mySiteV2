@@ -53,7 +53,7 @@
   ];
 </script>
 
-<footer class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-16 transition-colors duration-300">
+<footer class="bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-90 rounded-2xl shadow-lg p-8 mb-16 transition-colors duration-300">
   <div class="max-w-4xl mx-auto">
     <!-- Header Section -->
     <div class="text-center mb-8">

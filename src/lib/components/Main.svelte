@@ -4,7 +4,7 @@
   import SkillCards from './SkillCards.svelte';
 </script>
   
-<main class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-16 transition-colors duration-300">
+<main class="bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-90 rounded-2xl shadow-lg p-8 mb-16 transition-colors duration-300">
   <section class="mb-12">
     <h2 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">About Me</h2>
     <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
