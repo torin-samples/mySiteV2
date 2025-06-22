@@ -57,12 +57,6 @@ Interactive coffee ordering system
 - Firebase
 - AWS
 
-## 📫 Contact
-
-- Email: torin.samples@gmail.com
-- LinkedIn: [linkedin.com/in/torin-samples](https://linkedin.com/in/torin-samples)
-- GitHub: [github.com/torin-samples](https://github.com/torin-samples)
-
 ## 🌐 Languages
 
 - English (Native)
@@ -71,7 +65,7 @@ Interactive coffee ordering system
 ## 🎓 Education
 
 Currently pursuing Computer Science at the University of Washington
-- GPA: 3.69
+- GPA: 3.79
 - Dean's List Recipient
 
 ## 📄 License
