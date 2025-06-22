@@ -288,7 +288,8 @@
   <canvas
     bind:this={canvasRef}
     class="absolute inset-0 w-full h-full pointer-events-none z-10 rounded-xl"
-  />
+  ></canvas>
+
   <slot />
 </div>
 
