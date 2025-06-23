@@ -43,7 +43,7 @@
       
       <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-4">
         <iframe 
-          src="https://jandee.vercel.app/torin-samples?scheme=dark&footer=false&radius=3&margin=2" 
+          src="https://jandee.vercel.app/torin-samples?tz=America/Los_Angeles&scheme=dark&footer=false&radius=3&margin=2" 
           class="w-full h-32 border-0 rounded-lg transition-all duration-300"
           title="GitHub Contributions"
         ></iframe>
