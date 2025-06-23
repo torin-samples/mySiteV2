@@ -5,24 +5,27 @@
     let mounted = false;
 
     onMount(() => {
+        const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const storedTheme = localStorage.getItem('theme');
-        isDark = storedTheme === 'dark' || (!storedTheme && prefersDark);
-        applyTheme();
+        
+        isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+        updateTheme();
         mounted = true;
     });
 
     function toggleTheme() {
         isDark = !isDark;
-        applyTheme();
+        updateTheme();
     }
 
-    function applyTheme() {
+    function updateTheme() {
+        const root = document.documentElement;
+        
         if (isDark) {
-            document.documentElement.classList.add('dark');
+            root.classList.add('dark');
             localStorage.setItem('theme', 'dark');
         } else {
-            document.documentElement.classList.remove('dark');
+            root.classList.remove('dark');
             localStorage.setItem('theme', 'light');
         }
     }
@@ -30,8 +33,8 @@
 
 <button
     on:click={toggleTheme}
-    class="fixed top-4 right-4 p-3 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg 
-        hover:scale-110 transition-all duration-300 z-50"
+    class="fixed top-4 right-4 p-3 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xs shadow-lg 
+        hover:scale-110 transition-all duration-300 z-50 border border-gray-200 dark:border-gray-700"
     aria-label="Toggle theme"
 >
     {#if mounted}
@@ -48,5 +51,7 @@
                 />
             </svg>
         {/if}
+    {:else}
+        <div class="w-6 h-6 animate-pulse bg-gray-300 rounded"></div>
     {/if}
 </button>

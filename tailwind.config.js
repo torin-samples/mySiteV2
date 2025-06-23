@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
-  darkMode: 'class',
   theme: {
     extend: {
+      backdropBlur: {
+        'xxs': '0.5px',
+        'xs': '1px',
+        'sm-light': '2px',
+      },
       colors: {
         // Primary brand colors
         primary: {
@@ -37,7 +41,7 @@ export default {
           indigo: '#6366f1',
           purple: '#8b5cf6',
           emerald: '#10b981',
-        }
+        },
       },
     },
   },

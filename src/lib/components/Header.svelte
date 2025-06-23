@@ -32,7 +32,7 @@
     ];
 </script>
   
-<header class="text-center mb-16 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-90 rounded-2xl p-8 shadow-lg transition-colors duration-300">
+<header class="text-center mb-16 bg-white/60 dark:bg-gray-800/70 backdrop-blur-xs rounded-2xl p-8 shadow-lg transition-colors duration-300">
     <img src="{base}/pfp.jpg" alt="Torin Samples" class="w-40 h-40 rounded-full object-cover mx-auto mb-8 border-4 border-white shadow-xl">
     <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-4">Torin Samples</h1>
     <p class="text-xl text-gray-800 dark:text-gray-200 mb-8 font-semibold bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 inline-block px-4 py-2 rounded-full">

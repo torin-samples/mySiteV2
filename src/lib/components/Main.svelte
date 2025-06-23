@@ -2,9 +2,33 @@
   import { base } from '$app/paths';
   import ProjectCards from './ProjectCards.svelte';
   import SkillCards from './SkillCards.svelte';
+  import { onMount } from 'svelte';
+
+  let isDark = false;
+
+  onMount(() => {
+    // Check initial theme state
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+
+    // Listen for theme changes
+    const observer = new MutationObserver(() => {
+      isDark = document.documentElement.classList.contains('dark');
+    });
+    
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  });
+
+  $: githubScheme = isDark ? 'dark' : 'light';
 </script>
   
-<main class="bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-90 rounded-2xl shadow-lg p-8 mb-16 transition-colors duration-300">
+<main class="bg-white/60 dark:bg-gray-800/70 backdrop-blur-xs rounded-2xl shadow-lg p-8 mb-16 transition-colors duration-300">
   <section class="mb-12">
     <h2 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">About Me</h2>
     <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -20,7 +44,7 @@
 
   <section class="mb-12">
     <h2 class="text-3xl font-semibold text-gray-800 dark:text-white mb-6">GitHub Activity</h2>
-    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+    <div class="bg-white/50 dark:bg-gray-800/60 backdrop-blur-xs rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
       <div class="flex items-center justify-between mb-4">
         <div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white">Contribution Graph</h3>
@@ -41,9 +65,9 @@
         </a>
       </div>
       
-      <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-4">
+      <div class="bg-gray-50/40 dark:bg-gray-900/50 rounded-lg p-4">
         <iframe 
-          src="https://jandee.vercel.app/torin-samples?tz=America/Los_Angeles&scheme=dark&footer=false&radius=3&margin=2" 
+          src="https://jandee.vercel.app/torin-samples?tz=America/Los_Angeles&scheme={githubScheme}&footer=false&radius=3&margin=2" 
           class="w-full h-32 border-0 rounded-lg transition-all duration-300"
           title="GitHub Contributions"
         ></iframe>
