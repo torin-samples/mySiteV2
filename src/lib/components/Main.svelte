@@ -25,7 +25,7 @@
         <div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white">Contribution Graph</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400">
-            Recent activity on distributed systems and cloud computing projects
+            Recent Activity on GitHub
           </p>
         </div>
         <a 
